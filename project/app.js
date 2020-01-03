@@ -5,11 +5,7 @@ var app = express();
 redirect(app);
 var router = express.Router();
 var bodyParser = require("body-parser");
-var server = require("http").createServer((request, response) => {
-  response.writeHead(200, { "Content-Type": "text/html" });
-  response.write(`Hello World`);
-  response.end();
-});
+var server = require("http").createServer(app);
 
 app.use(bodyParser.json());
 
