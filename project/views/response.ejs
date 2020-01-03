@@ -1,6 +1,13 @@
 <html>
 <head>
 <title>Merchant Check Out Page</title>
+	<% if (typeof restdata != ‘undefined’ && restdata == ‘true’) { %>
+		<title>true</title>
+	<% }else if (typeof restdata != ‘undefined’ && restdata == ‘false’) { %>
+		<title>false</title>
+	<% } else { 
+		%><title>Merchant Checkout Page</title>
+	<% } %>
 </head>
 <body>
 <% if (restdata == 'true') { 	%>
